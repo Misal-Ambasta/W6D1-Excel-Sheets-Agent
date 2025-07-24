@@ -1,0 +1,9 @@
+pandas
+openpyxl
+langchain>=0.3.0
+langchain-community
+streamlit
+python-dotenv
+langchain-google-genai
+rapidfuzz
+

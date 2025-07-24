@@ -25,7 +25,7 @@ Build an intelligent Excel agent using LangChain that processes large Excel file
 
 ### 3. Technology Stack (Choose One)
 
-**Python:** pandas + openpyxl + langchain-community + streamlit/flask
+**Python:** pandas + openpyxl + langchain-community + streamlit
 
 ### 4. LangChain Tools
 
