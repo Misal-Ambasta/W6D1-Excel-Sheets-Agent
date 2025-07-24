@@ -4,43 +4,6 @@ An intelligent Excel agent using LangChain and Gemini (via langchain-google-gena
 
 ---
 
-## 🚀 Features (Phases 1–6 Complete)
-
-### ✅ Phase 1: Core Setup & File Handling
-- Virtual environment, requirements, and environment config
-- Streamlit web interface with file upload and multi-sheet support
-- Memory-efficient Excel reading (chunked for 10,000+ rows)
-- Automatic data type detection and conversion
-
-### ✅ Phase 2: Natural Language Query Parsing
-- Gemini LLM (Google Generative AI) integration via `langchain-google-genai`
-- Prompt templates for filtering, aggregation, sorting, and pivot table queries
-- NL query box in UI, mapped to pandas operations
-- Robust error handling for LLM and code execution
-
-### ✅ Phase 3: LangChain Tooling & Function Integration
-- Reusable tools: `read_worksheet`, `filter_data`, `aggregate_data`, `sort_data`, `pivot_table`
-- Modularized in `excel_tools.py` for LLM/manual use
-
-### ✅ Phase 4: Column Name Intelligence
-- Fuzzy column matcher (RapidFuzz)
-- Business synonym dictionary (qty/quantity, amt/amount, etc.)
-- Header normalization (lowercase, special chars removed, underscores)
-- LLM-assisted mapping for ambiguous columns
-- All logic in `column_mapping.py`
-
-### ✅ Phase 5: Production-Level Robustness
-- (Edge case handling, API rate limits, concurrency, and memory monitoring can be enabled as needed)
-
-### ✅ Phase 6: Performance, UX & Finalization
-- Query response timing and warnings for >10s
-- Loading indicators and progress feedback
-- Caching of previous queries/results (`st.cache_data`)
-- Lazy loading for large dataframes
-- Logging, debugging, and metrics (`app_metrics.log`)
-
----
-
 ## 🛠️ Installation & Setup
 
 ### Prerequisites
@@ -77,7 +40,6 @@ W6D1-Excel-Sheets-Agent/
 ├── create_sample_data.py# Generate test Excel files
 ├── requirements.txt     # Python dependencies
 ├── .env.example         # Environment variables template
-├── todo.md              # Phase-wise development plan
 ├── problem_statement.md # Project requirements
 ├── excel_tools.py       # Core worksheet tools
 ├── column_mapping.py    # Column name intelligence
@@ -131,6 +93,3 @@ This creates `sample_data.xlsx` with:
 - Merged cells handling needs improvement
 
 ---
-
-## 🤝 Contributing
-This is a phase-wise development project. All major features up to Phase 6 are implemented. Feedback and contributions for production hardening and deployment are welcome!
