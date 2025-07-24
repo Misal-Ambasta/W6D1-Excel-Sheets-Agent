@@ -20,7 +20,7 @@ User Uploads File -> Streamlit UI -> app.py (file uploader) -> pandas.read_excel
 ```mermaid
 flowchart TD
     A[User Uploads File] --> B[Streamlit UI]
-    B --> C[app.py: file uploader]
+    B --> C["app.py: file uploader"]
     C --> D[pandas.read_excel]
     D --> E[Sheet Names Extracted]
     E --> F[User Selects Sheet]
@@ -44,7 +44,7 @@ User Requests Preview -> Streamlit UI -> app.py (df.head) -> Extract Column Meta
 ```mermaid
 flowchart TD
     A[User Requests Preview] --> B[Streamlit UI]
-    B --> C[app.py: df.head]
+    B --> C["app.py: df.head"]
     C --> D[Extract Column Metadata]
     D --> E[Display in UI]
 ```
@@ -67,10 +67,10 @@ User NL Query -> Streamlit UI -> app.py (run_gemini_query) -> Gemini LLM (langch
 ```mermaid
 flowchart TD
     A[User NL Query] --> B[Streamlit UI]
-    B --> C[app.py: run_gemini_query]
-    C --> D[Gemini LLM (langchain-google-genai)]
+    B --> C["app.py: run_gemini_query"]
+    C --> D["Gemini LLM (langchain-google-genai)"]
     D --> E[Generated pandas code]
-    E --> F[app.py: safe_exec]
+    E --> F["app.py: safe_exec"]
     F --> G[Results/Errors to UI]
 ```
 
@@ -93,7 +93,7 @@ User Query Column -> app.py -> column_mapping.map_column -> (normalize/synonym/f
 flowchart TD
     A[User Query Column] --> B[app.py]
     B --> C[column_mapping.map_column]
-    C --> D[normalize/synonym/fuzzy/LLM]
+    C --> D["normalize/synonym/fuzzy/LLM"]
     D --> E[Best Match]
     E --> F[Used in pandas code]
 ```
@@ -116,10 +116,10 @@ User Runs Query -> app.py -> st.cache_data (check) -> (if miss) -> Execute Query
 ```mermaid
 flowchart TD
     A[User Runs Query] --> B[app.py]
-    B --> C[st.cache_data (check)]
+    B --> C["st.cache_data (check)"]
     C --> D{Cache Hit?}
-    D -- Yes --> E[Return Cached Result]
-    D -- No --> F[Execute Query]
+    D -->|Yes| E[Return Cached Result]
+    D -->|No| F[Execute Query]
     F --> G[Log to app_metrics.log]
     G --> H[Show Timing/Warnings in UI]
 ```
@@ -140,7 +140,7 @@ Operation Triggered -> app.py or LLM -> excel_tools.<function> -> Result to app/
 ```mermaid
 flowchart TD
     A[Operation Triggered] --> B[app.py or LLM]
-    B --> C[excel_tools.<function>]
+    B --> C["excel_tools.function"]
     C --> D[Result to app/LLM]
 ```
 
