@@ -13,7 +13,7 @@ An intelligent Excel agent using LangChain and Gemini (via langchain-google-gena
 ### Quick Start
 1. **Clone and navigate to the project:**
    ```bash
-   cd d:\MisogiAI\Week-6\W6D1-Excel-Sheets-Agent
+   cd cloned-repo
    ```
 2. **Install dependencies:**
    ```bash
@@ -72,18 +72,6 @@ This creates `sample_data.xlsx` with:
 - **Customer_Data:** 1,000 customer records
 - **Product_Inventory:** Product catalog with stock info
 - **Financial_Summary:** Monthly financial data
-
----
-
-## 📝 Dependencies
-- `pandas==2.1.4` - Data manipulation and analysis
-- `openpyxl==3.1.2` - Excel file reading/writing
-- `langchain==0.1.0` - LLM framework
-- `langchain-community==0.0.10` - Community tools
-- `langchain-google-genai==0.0.10` - Gemini LLM integration
-- `rapidfuzz==3.6.2` - Fast fuzzy matching
-- `streamlit==1.29.0` - Web interface
-- `python-dotenv==1.0.0` - Environment variable management
 
 ---
 
